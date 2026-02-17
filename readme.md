@@ -1,4 +1,4 @@
-# Algonquin Theme
+# Three Star Media Theme
 
 
 ### Notes
