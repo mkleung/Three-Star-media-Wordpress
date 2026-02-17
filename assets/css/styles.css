@@ -1,0 +1,410 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/***************************************************
+				Site Default Styles
+***************************************************/
+.clearfix:after{
+	display: table;
+	content: "";
+	clear: both;
+}
+html{
+	color: #c68d00;
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	height: 100%;
+}
+body{
+	line-height: 1.5;
+	height: 100%;
+}
+*, *:after, *:before{
+	box-sizing: inherit;	
+}
+a{
+	text-decoration: none;
+	color: #ffbb08;
+}
+p{
+	margin: 10px 0;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: bold;	
+}
+h1{ font-size: 2em;}
+h2{ font-size: 1.75em;}
+h3{ font-size: 1.5em;}
+h4{ font-size: 1.25em;}
+
+img{
+	width: 100%;
+}
+/**********************************
+		HEADER STYLES
+***********************************/
+header{
+	background-color: #ffe6ac;
+	padding: 20px;
+}
+.logo-title{
+	-webkit-display: flex;
+	-ms-display: flex;
+	display: flex;
+
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+}
+.logo{
+	width: auto;
+}
+.logo-title h1{
+	font-size: 2.5em;
+	display: none;
+}
+/**********************************
+		NAVIGATION STYLES
+**********************************/
+nav ul{
+	display: none;
+
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav ul li{
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+
+	margin: 10px 0;
+
+	text-align: center;
+}
+nav ul li a,
+nav ul li a:visited{
+	display: block;
+	padding-top: 10px;
+	height: 40px;
+	background-color: #c68d00;
+	color: #ffe6ac;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li.active a{
+	color: #c68d00;
+	background-color: #ffbb08;
+}
+/* Adding styles for the menu icon */
+nav .im-menu{
+	padding: 10px 0;
+}
+nav .im-menu:before{
+	font-size: 40px;
+}
+/* Class of fixed nav to fix the nav on top of the page when scrolling */
+.fixed-nav{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: #ffe6ac;
+	padding: 0 20px;
+}
+.fixed-nav ul{
+	max-width: 960px;
+	margin: 0 auto;
+}
+.add-padding{
+	padding-bottom: 60px;
+}
+nav ul.show{
+	-webkit-display: flex;
+	-ms-display: flex;
+	display: flex;
+}
+/**********************************
+		MAIN CONTENT
+**********************************/
+.main-content{
+	padding: 20px;
+	background-color: #fff;
+}
+.intro{
+	margin-bottom: 20px;
+}
+/**********************************
+		SERVICES - MAIN CONTENT
+**********************************/
+.services,
+.team-pros{
+	-webkit-display: flex;
+	-ms-display: flex;
+	display: flex;
+
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+}
+.service,
+.mem{
+	max-width: 300px;
+	min-height: 350px;
+	background-color: #ffe6ac;
+	margin: 10px auto;
+	text-align: center;
+}
+.info{
+	padding: 10px;
+}
+.info h3{
+	font-weight: normal;
+}
+/**********************************
+		CONTACT STYLES
+**********************************/
+label,
+input{
+	display: block;
+	width: 50%;
+	font-size: 1.25em;
+	margin: 10px 0;
+}
+input{
+	padding: 5px 10px;
+}
+input[type="checkbox"]{
+	width: auto;
+	display: inline-block;
+	margin: 0;
+}
+label[for="consent"]{
+	width: 100%;
+}
+textarea{
+	display: block;
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	height: 150px;
+	min-height: 150px;
+	max-height: 150px;
+}
+button{
+	padding: 10px 20px;
+	font-size: 1.5em;
+	color: #c68d00;
+	background-color: #ffe6ac;
+	border: none;
+	outline: none;
+	float: right;
+}
+/***************************************
+		TEAM STYLES
+most of team styles are same as services
+****************************************/
+.mem {
+	padding: 20px;
+}
+.mem img{
+	width: 200px;
+	border-radius: 50%;
+}
+/**********************************
+		EXTRAINFO STYLES
+**********************************/
+.extrainfo{
+	/* to add the fixed background image that appears on scroll */
+	background: url("../images/video.jpg") no-repeat fixed center center / cover  transparent;
+	padding: 40px 20px;
+}
+.extrainfo div{
+	padding: 20px;
+	background-color: rgba(0,0,0,0.4);
+	color: #ffe6ac;
+}
+
+/**********************************
+		FOOTER STYLES
+**********************************/
+footer{
+	-webkit-display: flex;
+	-ms-display: flex;
+	display: flex;
+
+	-webkit-flex-flow: column wrap;
+	-ms-flex-flow: column wrap;
+	flex-flow: column wrap;
+
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+	background-color: #ffbb08;
+	height: 150px;
+}
+
+/*-------------------------
+Sticky Footer by Ryan Fait
+http://ryanfait.com/
+---------------------------*/
+/* The styles below will make the footer stick to the bottom of the page,
+ even when the content height is less than the browser height */
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -150px; /* the bottom margin is the negative value of the footer's height */
+	background-color: #fff;
+}
+.push {
+	height: 150px; /* '.push' must be the same height as 'footer' */
+}
+
+/**********************************
+		MEDIA QUERY
+**********************************/
+@media screen and (min-width: 768px){
+	/* Show navigation and hide the menu-icon */
+	nav ul{
+		-webkit-display: flex;
+		-ms-display: flex;
+		display: flex;
+	}
+	nav .im-menu{
+		display: none;
+	}
+	/* Setting max widths to content blocks */
+	.main-content,
+	.header-content,
+	.footer-content{
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	/* changing the layout of the logo and title */
+	.logo-title{
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+
+		-webkit-align-items: baseline;
+		-ms-flex-align: baseline;
+		align-items: baseline;
+	}
+	/* Display the site title back */
+	.logo-title h1{
+		margin-left: 20px;
+		display: block;
+	}
+	/* changing the layout of the navigation items */
+	nav ul{
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify; /* since microsoft uses 2011 syntax we will need to defien the property differently */
+		justify-content: space-between;
+	}		
+	nav ul li{
+		max-width: 124px;
+	}
+	/* changing the layout of services */
+	.services,
+	.team-pros{
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+
+		-webkit-justify-content: space-around;
+		-ms-flex-align: justify;
+		justify-content: space-around;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
